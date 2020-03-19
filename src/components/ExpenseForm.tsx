@@ -52,6 +52,7 @@ const ExpenseForm: React.FC<ExpenseFormType> = props => {
     } else {
       props.onAdd(data);
       setData({ ...initialValue, id: uuid() });
+      setError(null);
       if (expenseNameInputRef && expenseNameInputRef.current)
         expenseNameInputRef.current.focus();
     }
